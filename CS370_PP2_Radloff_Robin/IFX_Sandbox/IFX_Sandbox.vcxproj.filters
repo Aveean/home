@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\FX">
+      <UniqueIdentifier>{efbdfb55-7300-4210-a79f-cab732337bf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FX\Base">
+      <UniqueIdentifier>{16cf34ec-a238-41db-a54a-dfecc40d261a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FX\Invert">
+      <UniqueIdentifier>{51a8293d-bc1a-4d25-82da-176bbb752080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utility">
+      <UniqueIdentifier>{a00526d7-e825-43cf-ba99-b6ceab3de6ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\App">
+      <UniqueIdentifier>{4c4b96e6-7099-4aae-bfc5-49f6a2729dcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Image">
+      <UniqueIdentifier>{ecf1a165-b42f-477f-b8c0-83394683f3d0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\IFXPropertyPanel.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IFXApp.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IFXFrame.cpp">
+      <Filter>Source Files\App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ImRecipe.cpp">
+      <Filter>Source Files\FX\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ImStage.cpp">
+      <Filter>Source Files\FX\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\InvertStage.cpp">
+      <Filter>Source Files\FX\Invert</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Image2D.cpp">
+      <Filter>Source Files\Image</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\IFXFrame.h">
+      <Filter>Source Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IFXPropertyPanel.h">
+      <Filter>Source Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\IFXApp.h">
+      <Filter>Source Files\App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ImRecipe.h">
+      <Filter>Source Files\FX\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ImStage.h">
+      <Filter>Source Files\FX\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\InvertStage.h">
+      <Filter>Source Files\FX\Invert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Image2D.h">
+      <Filter>Source Files\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\MathLibrary.h">
+      <Filter>Source Files\Utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
