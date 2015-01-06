@@ -140,6 +140,7 @@ void IFXFrame::InitGui(wxWindow* parent, wxWindowID id)
   wxFlexGridSizer* FlexGridSizer2;
   wxFlexGridSizer* FlexGridSizer3;
   wxFlexGridSizer* FlexGridSizer4;
+  wxFlexGridSizer* FlexGridSizer5;
   wxFlexGridSizer* FlexGridMain;
   wxGridSizer* GridSizer1;
   wxGridSizer* GridSizer2;
@@ -232,18 +233,18 @@ void IFXFrame::InitGui(wxWindow* parent, wxWindowID id)
   FlexGridSizer4->Add(FinalImagePanel, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
   GridSizer4->Add(FlexGridSizer4, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
 
-  //FlexGridSizer6 = new wxFlexGridSizer(2, 1, 0, 0);
-  //SourceImage2Selection = new wxChoice(this, ID_SourceImage2Selection, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_SourceImage2Selection"));
-  //FlexGridSizer6->Add(SourceImage2Selection, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
-  //SourceImagePanel2 = new wxPanel(this, ID_SourceImagePanel2, wxDefaultPosition,ImagePanelSize, wxRAISED_BORDER|wxTAB_TRAVERSAL, _T("ID_SourceImagePanel2"));
-  //FlexGridSizer6->Add(SourceImagePanel2, 1, wxGROW|wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
-  //GridSizer4->Add(FlexGridSizer6, 1, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
-  //FlexGridSizer5 = new wxFlexGridSizer(2, 1, 0, 0);
-  //FinalImage2Selection = new wxChoice(this, ID_FinalImage2Selection, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_FinalImage2Selection"));
-  //FlexGridSizer5->Add(FinalImage2Selection, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
-  //FinalImagePanel2 = new wxPanel(this, ID_FinalImagePanel2, wxDefaultPosition,ImagePanelSize, wxRAISED_BORDER|wxTAB_TRAVERSAL, _T("ID_FinalImagePanel2"));
-  //FlexGridSizer5->Add(FinalImagePanel2, 1, wxEXPAND| wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
-  //GridSizer4->Add(FlexGridSizer5, 1, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
+  FlexGridSizer6 = new wxFlexGridSizer(2, 1, 0, 0);
+  SourceImage2Selection = new wxChoice(this, ID_SourceImage2Selection, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_SourceImage2Selection"));
+  FlexGridSizer6->Add(SourceImage2Selection, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
+  SourceImagePanel2 = new wxPanel(this, ID_SourceImagePanel2, wxDefaultPosition, mImagePanelSize, wxRAISED_BORDER | wxTAB_TRAVERSAL, _T("ID_SourceImagePanel2"));
+  FlexGridSizer6->Add(SourceImagePanel2, 1, wxGROW|wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
+  GridSizer4->Add(FlexGridSizer6, 1, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
+  FlexGridSizer5 = new wxFlexGridSizer(2, 1, 0, 0);
+  FinalImage2Selection = new wxChoice(this, ID_FinalImage2Selection, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_FinalImage2Selection"));
+  FlexGridSizer5->Add(FinalImage2Selection, 1, wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
+  FinalImagePanel2 = new wxPanel(this, ID_FinalImagePanel2, wxDefaultPosition, mImagePanelSize, wxRAISED_BORDER | wxTAB_TRAVERSAL, _T("ID_FinalImagePanel2"));
+  FlexGridSizer5->Add(FinalImagePanel2, 1, wxEXPAND| wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
+  GridSizer4->Add(FlexGridSizer5, 1, wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 1);
 
   FlexGridSizer1->Add(GridSizer4, 1, wxGROW|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 
@@ -287,10 +288,10 @@ void IFXFrame::InitGui(wxWindow* parent, wxWindowID id)
   SourceImagePanel->Connect(wxEVT_PAINT,(wxObjectEventFunction)&IFXFrame::OnSourceImagePanelPaint,0,this);
   Connect(ID_FinalImageSelection,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&IFXFrame::OnFinalImageSelectionSelect);
   FinalImagePanel->Connect(wxEVT_PAINT,(wxObjectEventFunction)&IFXFrame::OnFinalImagePanelPaint,0,this);
-  //Connect(ID_SourceImage2Selection,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&IFXFrame::OnSourceImage2SelectionSelect);
-  //SourceImagePanel2->Connect(wxEVT_PAINT,(wxObjectEventFunction)&IFXFrame::OnSourceImagePanel2Paint,0,this);
-  //Connect(ID_FinalImage2Selection,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&IFXFrame::OnFinalImage2SelectionSelect);
-  //FinalImagePanel2->Connect(wxEVT_PAINT,(wxObjectEventFunction)&IFXFrame::OnFinalImagePanel2Paint,0,this);
+  Connect(ID_SourceImage2Selection,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&IFXFrame::OnSourceImage2SelectionSelect);
+  SourceImagePanel2->Connect(wxEVT_PAINT,(wxObjectEventFunction)&IFXFrame::OnSourceImagePanel2Paint,0,this);
+  Connect(ID_FinalImage2Selection,wxEVT_COMMAND_CHOICE_SELECTED,(wxObjectEventFunction)&IFXFrame::OnFinalImage2SelectionSelect);
+  FinalImagePanel2->Connect(wxEVT_PAINT,(wxObjectEventFunction)&IFXFrame::OnFinalImagePanel2Paint,0,this);
   Connect(ID_OpenItem,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&IFXFrame::OnOpenFile);
   Connect(ID_SaveAsItem,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&IFXFrame::OnSaveFileAs);
   Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&IFXFrame::OnQuit);
